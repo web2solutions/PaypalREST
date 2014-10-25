@@ -27,7 +27,14 @@ $ cpanm git://github.com/web2solutions/PaypalREST.git
 	        description => 'pay for service',
 	        return_url => 'your_return_url',
 	        cancel_url => 'your_cancel_url'
-	}); 
+	});
+	
+	# then execute payment
+	
+	my $payment = $paypal->execute_payment({
+		execute_url       => $execute_url,
+		payer_id         => $payer_id
+	});
 ````
 
 **Pay with Credit card balance**
@@ -48,12 +55,5 @@ $ cpanm git://github.com/web2solutions/PaypalREST.git
 	        postal_code  => '4444',
 	        country_code  => 'US',
 	        description => 'pay for service'
-	});
-	
-	# then execute payment
-	
-	my $payment = $paypal->execute_payment({
-		execute_url       => $execute_url,
-		payer_id         => $payer_id
 	});
 ````
