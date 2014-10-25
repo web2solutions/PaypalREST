@@ -18,11 +18,35 @@ $ cpanm git://github.com/web2solutions/PaypalREST.git
 		$client_id
 		,$client_secret
 	);
-	
+````
+
+**Pay with Paypal balance**
+````perl	
 	my $payment = $paypal->pay_with_ballance({
-	        amount	=> $amount,
-	        description => $pay_for_desc,
-	        return_url => $PaymentFlowPath . '/processors/paypal_return.pl?invoice_id=' . $invoice_id,
-	        cancel_url => $PaymentFlowPath . '/processors/paypal_cancel.pl?invoice_id=' . $invoice_id
+	        amount	=> 1.59,
+	        description => 'pay for service',
+	        return_url => 'your_return_url',
+	        cancel_url => 'your_cancel_url'
 	}); 
+````
+
+**Pay with Credit card balance**
+
+````perl	
+	my $payment = $paypal->pay_as_guest({
+	        number       => '4353185781082049',
+	        type         => 'visa',
+	        cvv2           => '442',
+	        expire_month => 3,
+	        expire_year  => 2018,
+	        amount          => 3.58,
+	        first_name  => 'Steve',
+	        last_name  => 'Jobs',
+	        line1  => 'Street 345',
+	        city  => 'Palo Alto',
+	        state  => 'CA',
+	        postal_code  => '4444',
+	        country_code  => 'US',
+	        description => 'pay for service'
+	});
 ````
