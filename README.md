@@ -49,4 +49,11 @@ $ cpanm git://github.com/web2solutions/PaypalREST.git
 	        country_code  => 'US',
 	        description => 'pay for service'
 	});
+	
+	# then execute payment
+	
+	my $payment = $paypal->execute_payment({
+		execute_url       => $execute_url,
+		payer_id         => $payer_id
+	});
 ````
