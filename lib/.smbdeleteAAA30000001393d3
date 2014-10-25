@@ -272,7 +272,7 @@ sub pay_as_guest {
     return $self->rest( 'POST', "/v1/payments/payment", _json_encode($request_hash) );
 }
 
-sub pay_with_stored_cc {
+sub stored_cc_payment {
     my $self = shift;
     my ($data) = @_;
 
@@ -320,7 +320,7 @@ sub get_payments {
     return $self->rest( "GET", "/v1/payments/payment" );
 }
 
-sub vault_credit_card {
+sub store_cc {
     my $self = shift;
     my ($data) = @_;
 
@@ -343,7 +343,7 @@ sub vault_credit_card {
     return $self->rest( 'POST', "/v1/vault/credit-card", _json_encode( \%credit_card ) );
 }
 
-sub get_credit_card {
+sub get_cc {
     my $self = shift;
     my ($id) = @_;
     return $self->rest( "GET", "/v1/vault/credit-card/$id" );
