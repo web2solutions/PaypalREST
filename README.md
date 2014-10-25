@@ -20,6 +20,33 @@ $ cpanm git://github.com/web2solutions/PaypalREST.git
 	);
 ````
 
+## Methods
+
+**PaypalREST->new()**
+
+**PaypalREST->live()**
+
+**PaypalREST->rest()**
+
+**PaypalREST->pay_with_ballance()**
+
+**PaypalREST->execute_payment()**
+
+**PaypalREST->pay_as_guest()**
+
+**PaypalREST->pay_with_stored_cc()**
+
+**PaypalREST->get_payment()**
+
+**PaypalREST->get_payments()**
+
+**PaypalREST->vault_credit_card()**
+
+**PaypalREST->get_credit_card()**
+
+
+## Examples
+
 **Pay with Paypal balance**
 ````perl	
 	my $payment = $paypal->pay_with_ballance({
