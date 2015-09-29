@@ -84,3 +84,10 @@ $ cpanm git://github.com/web2solutions/PaypalREST.git
 	        description => 'pay for service'
 	});
 ````
+
+
+### TODO
+
+- doc
+- examples
+- build
