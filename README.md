@@ -3,6 +3,8 @@ PaypalREST
 
 PaypalREST - Consume Paypal REST API via perl
 
+***This is not for production purpose anymore***
+
 ## INSTALL
 
 $ cpan App::cpanminus
